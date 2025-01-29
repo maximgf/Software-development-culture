@@ -8,14 +8,15 @@ def read_root():
     return {"message": "Hello, World!"}
 
 @app.get("/items")
-<<<<<<< HEAD
-def get_items():
-    return {"items": ["item1", "item2", "item3"]}
-=======
 def get_items(skip: int = Query(0), limit: int = Query(10)):
-    all_items = ["item1", "item2", "item3", "item4", "item5"]
+    all_items = [
+        {"id": 1, "name": "item1", "description": "A fancy item", "price": 10.99},
+        {"id": 2, "name": "item2", "description": "A useful item", "price": 5.49},
+        {"id": 3, "name": "item3", "description": "A rare item", "price": 99.99},
+        {"id": 4, "name": "item4", "description": "A common item", "price": 1.99},
+        {"id": 5, "name": "item5", "description": "A premium item", "price": 49.99},
+    ]
     return {"items": all_items[skip : skip + limit]}
->>>>>>> cda1caf440c227d53a5532c2082ca7177c306c72
 
 @app.get("/items_by_id")
 def get_items_by_id():
