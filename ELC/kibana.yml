@@ -1,0 +1,7 @@
+server.port: 5601
+server.host: "0.0.0.0"
+elasticsearch.hosts: ["https://localhost:9200"]
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "M4izU8vTEdkw9=Rix_Z5"
+elasticsearch.requestTimeout: 130000
+elasticsearch.ssl.certificateAuthorities: [ "/etc/kibana/certs/http_ca.crt" ]
